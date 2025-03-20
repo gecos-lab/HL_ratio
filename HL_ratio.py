@@ -17,13 +17,13 @@ import scipy.stats as ss
 
 # INPUT - VERTICAL FRACTURE NETWORK AND INTEPRETATION BOUNDARY SHAPEFILES
 
-vertical_fractures = Entities.Fractures(shp='Pontrelli/vertical/Set_2.shp', set_n=1)
-vertical_boundary = Entities.Boundary(shp='Pontrelli/vertical/Interpretation_boundary.shp', group_n=1)
+vertical_fractures = Entities.Fractures(shp='Pontrelli/verticale/Set_2.shp', set_n=1)
+vertical_boundary = Entities.Boundary(shp='Pontrelli/verticale/Interpretation_boundary.shp', group_n=1)
 
 #INPUT - HORIZONTAL FRACTURE NETWORK AND INTERPRETATION BOUNDARY SHAPEFILES
 
-horizontal_fractures = Entities.Fractures(shp='data/Pontrelli/horizontal/FN_set_2.shp', set_n=1)
-horizontal_boundary = Entities.Boundary(shp='data/Pontrelli/horizontal/Interpretation_boundary.shp', group_n=1)
+horizontal_fractures = Entities.Fractures(shp='data/Pontrelli/orizzontale/FN_set_2.shp', set_n=1)
+horizontal_boundary = Entities.Boundary(shp='data/Pontrelli/orizzontale/Interpretation_boundary.shp', group_n=1)
 
 #TOPOLOGICAL ANALYSIS AND LENGTH DISTRIBUTION FITTING
 
