@@ -96,8 +96,8 @@ for i in range(n_iter):
     horizontal_random_samples = np.sort(scipy_horizontal_dist.rvs(n_samples))
 
     IQR = ss.iqr(vertical_random_samples)
-    pos_cut_off = 6 # cutoff fisso
-    pos_cut_off2 = vertical_dist.mean + IQR*0.5 #A variable cutoff that changes based on the random samples. I compute the mean of the vertical random sample minus half of the interquartile range (IQR) of the data (to reduce the effect of outliers).
+    pos_cut_off = 6 # fixed cutoff
+    pos_cut_off2 = vertical_dist.mean + IQR*0.5 # Adaptive cutoff: A variable cutoff that changes based on the random samples. I compute the mean of the vertical random sample minus half of the interquartile range (IQR) of the data (to reduce the effect of outliers).
 
     mask = (vertical_random_samples<=pos_cut_off)
     mask2 = (vertical_random_samples<=pos_cut_off2)
@@ -150,9 +150,11 @@ for i in range(n_iter):
 
     plt.show()
 
-print(f'min nuovo metodo (fisso, adaptive): {np.min(regress_slope_values)}, {np.min(regress_slope_values2)}')
-print(f'max nuovo metodo (fisso, adaptive): {np.max(regress_slope_values)}, {np.max(regress_slope_values2)}')
-print(f'media nuovo metodo (fisso, adaptive): {np.mean(regress_slope_values)}, {np.mean(regress_slope_values2)}')
+    ################################################################
+
+print(f'min H/L (fixed, adaptive): {np.min(regress_slope_values)}, {np.min(regress_slope_values2)}')
+print(f'max H/L (fixed, adaptive): {np.max(regress_slope_values)}, {np.max(regress_slope_values2)}')
+print(f'mean H/L (fixed, adaptive): {np.mean(regress_slope_values)}, {np.mean(regress_slope_values2)}')
 
 
 # Slope frequency histogram
