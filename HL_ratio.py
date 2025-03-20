@@ -22,8 +22,8 @@ vertical_boundary = Entities.Boundary(shp='Pontrelli/verticale/Interpretation_bo
 
 #INPUT - HORIZONTAL FRACTURE NETWORK AND INTERPRETATION BOUNDARY SHAPEFILES
 
-horizontal_fractures = Entities.Fractures(shp='data/Pontrelli/orizzontale/FN_set_2.shp', set_n=1)
-horizontal_boundary = Entities.Boundary(shp='data/Pontrelli/orizzontale/Interpretation_boundary.shp', group_n=1)
+horizontal_fractures = Entities.Fractures(shp='Pontrelli/orizzontale/FN_set_2.shp', set_n=1)
+horizontal_boundary = Entities.Boundary(shp='Pontrelli/orizzontale/Interpretation_boundary.shp', group_n=1)
 
 #TOPOLOGICAL ANALYSIS AND LENGTH DISTRIBUTION FITTING
 
